@@ -1,0 +1,101 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model cloudinary {
+  cloudinaryid       Int @id
+  cloudinaryurl      String
+  resourcetitle      String @db.VarChar(80)
+  isimage            Boolean
+}
+
+model conceptvideos {
+  conceptvideoid     Int @id
+  name               String @db.VarChar(80)
+  choreoid           String?
+  season             String @db.VarChar(80)
+  year               Int
+  memberid           String?
+  description        String
+  youtubelink        String?
+  thumbnailurl       String?
+  date               DateTime?
+}
+
+model events {
+  eventid            Int @id
+  name               String @db.VarChar(80)
+  date               DateTime
+  starttime          String
+  endtime            String?
+  location           String
+  locationlink       String
+  description        String
+  eventvideoid       Int?
+  eventimageid       Int?
+}
+
+model members {
+  memberid           String   @id @db.VarChar(80)
+  name               String   @db.VarChar(80)
+  email              String?  @db.VarChar(80)
+  classyear          String?  @db.VarChar(80)
+  instagram          String?  @db.VarChar(80)
+  testimonialbio     String?
+  headshoturl        String?
+  testimonialurl     String?
+  bio                String?
+  alumniid           Boolean?
+  creativeteam       Boolean?
+}
+
+model misctext {
+  textid             Int @id
+  misctext           String
+  texttitle          String
+}
+
+model officers {
+  memberid           String   @id @db.VarChar(80)
+  position           String   @db.VarChar(80)
+  year               Int
+  core               Boolean
+}
+
+model pieces {
+  pieceid            Int   @id
+  name               String
+  showid             Int
+  choreoid           String
+  memberid           String?
+  youtubelink        String
+  thumbnailid        Int?
+}
+
+model shows {
+  showid             Int   @id
+  name               String   @db.VarChar(80)
+  season             String   @db.VarChar(80)
+  year               Int
+  descrip            String
+  memberid           String
+  showimageurl       String
+  showvideourl       String
+  youtubeid          String
+}
+
+model workshops {
+  workshopid         Int   @id
+  choreoid           String
+  title              String   
+  season             String   @db.VarChar(80)
+  youtubelink        String
+  workshopimageurl   String?
+  yearseasonid       Int
+}
