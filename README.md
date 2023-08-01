@@ -1,24 +1,15 @@
-# Custom server with TypeScript + Nodemon example
+# diSiac Website
 
-The example shows how you can use [TypeScript](https://typescriptlang.com) on both the server and the client while using [Nodemon](https://nodemon.io/) to live reload the server code without affecting the Next.js universal code.
+The new diSiac Website isn't currently live yet.
 
-Server entry point is `server.ts` in development and `dist/server.js` in production.
-The `dist` directory should be added to `.gitignore`.
+## About The App
 
-## Deploy your own
+The diSiac Dance Company Website is a comprehensive full-stack web application built to enhance the online presence of Princeton's diSiac Dance Group. With a significant increase in website speed by over 100% compared to its predecessor, the site offers tailored access control, providing specific interfaces for admins, members, and general viewers. The application features a user-friendly REST API, allowing authenticated users the ability to manage group members, and create, modify or delete entries related to past or upcoming shows, and media. This greatly simplifies future application maintenance. Additionally, the introduction of user authentication through Google Authentication ensures that sensitive information is accessible only to authorized members, thereby adding an extra layer of security and control.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/custom-server)
+## Technologies
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/custom-server)
+We used `TypeScript`, `React`, `Next.js`, `Tailwind CSS`, `Prisma`, `PostgreSQL`, `Cloudinary`, `HTML`, `CSS`
 
-## How to use
+## Status
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example custom-server custom-server-app
-# or
-yarn create next-app --example custom-server custom-server-app
-# or
-pnpm create next-app --example custom-server custom-server-app
-```
+The new diSiac website will be live once the database, which is managed by current diSiac members, is fully populated with all necessary information.
